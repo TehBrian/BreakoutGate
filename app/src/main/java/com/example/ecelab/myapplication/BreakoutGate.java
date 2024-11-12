@@ -151,7 +151,7 @@ public class BreakoutGate extends BaseGameActivity {
 
 		// these are used to set the position for the paddle sprite
 		final int centerX = (CAMERA_WIDTH - this.mPongTextureRegion.getWidth()) / 2;
-		final int centerY = CAMERA_HEIGHT - this.mPongTextureRegion.getHeight();
+		final int centerY = (CAMERA_HEIGHT - this.mPongTextureRegion.getHeight()) - 40;
 		final Sprite paddle = setupPaddle(centerX, centerY);
 
 		// creates the ball object that bounces around
@@ -197,7 +197,7 @@ public class BreakoutGate extends BaseGameActivity {
 					resetGame(scene);
 				}
 				----------------------------------->8-------------------------------------------*/
-				
+
 				// detects if the ball falls below the paddle
 				// i.e. lose condition
 				// this subtracts 1 point from the score
@@ -206,7 +206,7 @@ public class BreakoutGate extends BaseGameActivity {
 				if (ballBelowPaddle(paddle, ball)) {
 					playerDeath(paddle, ball, -1);
 				}
-				
+
 				/*-----------------------------------------------------------------------------*/
 				// reflect the ball when it hits the paddle
 				if (paddle.collidesWith(ball)) {
@@ -279,7 +279,7 @@ public class BreakoutGate extends BaseGameActivity {
 			}
 		});
 	}
-	
+
 	private void addRow(int screenY, final Scene scene) {
 		int screenX = 0;
 		TextureRegion texture = this.mGateTextureRegion;
@@ -312,31 +312,30 @@ public class BreakoutGate extends BaseGameActivity {
 	}
 
 	private void fillBoxArea(final Scene scene) {
-		
+
 		// this places rows until requested initial rows are all placed
 		for (int screenY = 0; screenY < numRows * blockHeight; screenY += blockHeight) {
-	
+
 			addRow(screenY, scene);
-				
+
 		}
 	}
 
 	private Sprite setupPaddle(final int centerX, final int centerY) {
-		final Sprite paddle = new Sprite(centerX, centerY,
-				this.mPongTextureRegion) {
+		return new Sprite(centerX, centerY, this.mPongTextureRegion) {
 			@Override
-			public boolean onAreaTouched(final TouchEvent pSceneTouchEvent,
-					final float pTouchAreaLocalX, final float pTouchAreaLocalY) {
-				// this gets the X coordinate of the finger touch,
+			public boolean onAreaTouched(
+                    final TouchEvent pSceneTouchEvent,
+                    final float pTouchAreaLocalX, final float pTouchAreaLocalY
+            ) {
+				// gets the X coordinate of the finger touch,
 				// then subtracts the width of the paddle,
 				// setting the paddle location to the bottom even if
 				// the touch is not directly on top of the paddle.
-				this.setPosition(pSceneTouchEvent.getX() - this.getWidth() / 2,
-						centerY);
+				this.setPosition(pSceneTouchEvent.getX() - this.getWidth() / 2, centerY);
 				return true;
 			}
 		};
-		return paddle;
 	}
 
 	@Override
@@ -409,7 +408,7 @@ public class BreakoutGate extends BaseGameActivity {
 		// end initialize textures
 
 		// loads the texture for the entire screen
-		this.mEngine.getTextureManager().loadTexture(this.mTexture); 
+		this.mEngine.getTextureManager().loadTexture(this.mTexture);
 	}
 
 	private void setupScoreBoard() {
@@ -420,7 +419,7 @@ public class BreakoutGate extends BaseGameActivity {
 		this.mEngine.getTextureManager().loadTexture(this.mFontTexture);
 		this.mEngine.getFontManager().loadFont(this.mFont);
 	}
-	
+
 	private void setupDeveloperName() {
 		// sets up font for name of developer
 		this.mFont2Texture = new Texture(256, 256, TextureOptions.BILINEAR);
@@ -460,7 +459,7 @@ public class BreakoutGate extends BaseGameActivity {
 			ball.setVelocityX(-ball.getVelocityX());
 		}
 	}
-	
+
 	private void resetBall(final Sprite paddle, final Ball ball) {
 		/*-----------------------------------------------------------------------------*/
 		ball.setPosition(CAMERA_WIDTH / 2 + ball.getBaseWidth(), CAMERA_HEIGHT / 2 - ball.getBaseHeight());
@@ -479,7 +478,7 @@ public class BreakoutGate extends BaseGameActivity {
 	private boolean ballBelowPaddle(final Sprite paddle, final Ball ball) {
 		return ball.getY() + ball.getBaseHeight() > paddle.getY() * 1.05;
 	}
-	
+
 	private void resetGame(Scene scene) {
 		removeSprite(scene, gateSpritesList);
 		// to avoid concurrency issues create a new list rather than reusing the old
