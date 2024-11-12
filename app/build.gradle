@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdk 35
     defaultConfig {
         applicationId "com.example.ecelab.myapplication"
-        minSdkVersion 33
-        targetSdkVersion 33
+        minSdkVersion 35
+        targetSdkVersion 35
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
