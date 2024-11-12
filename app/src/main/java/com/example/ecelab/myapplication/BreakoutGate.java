@@ -207,7 +207,7 @@ public class BreakoutGate extends BaseGameActivity {
 				// this may be changed to have more drastic consequences such as
 				// restarting the entire game
 				if (ballBelowPaddle(paddle, ball)) {
-					playerDeath(paddle, ball, -1);
+					playerDeath(paddle, ball);
 				}
 
 				/*-----------------------------------------------------------------------------*/
@@ -252,9 +252,7 @@ public class BreakoutGate extends BaseGameActivity {
 			// if the ball collides with the box
 			// AND it hits the bottom specifically
 			if (ball.collidesWith(box)) {
-				// increment the score and change the text
-				score++;
-				scoreBox.setText("Score: " + score);
+				updateScore(1);
 
 				// add the box to the list of sprites to remove
 				toRemoved.add(box);
@@ -474,11 +472,16 @@ public class BreakoutGate extends BaseGameActivity {
 		----------------------------------->8-------------------------------------------*/
 	}
 
-	private void playerDeath(final Sprite paddle, final Ball ball, int penalty) {
+	private void playerDeath(final Sprite paddle, final Ball ball) {
 		this.mDeath.play();
-		score -= penalty;
-		scoreBox.setText("Score: " + score);
+		this.updateScore(-1);
 		resetBall(paddle, ball);
+	}
+
+	private void updateScore(final int delta) {
+		// adjust score and change text
+		score += delta;
+		scoreBox.setText("Score: " + score);
 	}
 
 	private boolean ballBelowPaddle(final Sprite paddle, final Ball ball) {
