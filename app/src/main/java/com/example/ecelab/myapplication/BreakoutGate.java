@@ -36,7 +36,7 @@ import org.anddev.andengine.util.Debug;
 import android.graphics.Color;
 import android.graphics.Typeface;
 
-public class breakoutGate extends BaseGameActivity {
+public class BreakoutGate extends BaseGameActivity {
 
 	// the width of the game screen
 	private static final int CAMERA_WIDTH = 1024;
@@ -210,7 +210,7 @@ public class breakoutGate extends BaseGameActivity {
 				/*-----------------------------------------------------------------------------*/
 				// reflect the ball when it hits the paddle
 				if (paddle.collidesWith(ball)) {
-					breakoutGate.this.mPaddleHit.play();
+					BreakoutGate.this.mPaddleHit.play();
 					ball.setVelocityY(-DEMO_VELOCITY);
 				}
 				/*----------------------------------8<-------------------------------------------
@@ -256,7 +256,7 @@ public class breakoutGate extends BaseGameActivity {
 				// add the box to the list of sprites to remove
 				toRemoved.add(box);
 				// play the "tile hit" sound
-				breakoutGate.this.mTileHit.play();
+				BreakoutGate.this.mTileHit.play();
 				checkCollisionDirection(ball, box);
 
 				break boxCheckLoop;
@@ -267,7 +267,7 @@ public class breakoutGate extends BaseGameActivity {
 
 	private void removeSprite(final Scene scene, final List<Sprite> toRemoved) {
 		// this runs once per update/frame
-		breakoutGate.this.runOnUpdateThread(new Runnable() {
+		BreakoutGate.this.runOnUpdateThread(new Runnable() {
 
 			@Override
 			public void run() {
