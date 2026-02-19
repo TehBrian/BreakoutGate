@@ -64,7 +64,7 @@ public class BreakoutGate extends BaseGameActivity {
     // texture region for the balls
     private TiledTextureRegion mBallTextureRegion;
     // List that holds all of the gates
-    private List<Sprite> gateSpritesList = new ArrayList<Sprite>();
+    private List<Sprite> gateSpritesList = new ArrayList<>();
     // holds the font for the scoreboard
     private Font mFont;
     // holds the texture for the scoreboard
@@ -247,8 +247,7 @@ public class BreakoutGate extends BaseGameActivity {
     }
 
     private List<Sprite> checkForCollisions(final Ball ball) {
-        final List<Sprite> toRemoved = new ArrayList<Sprite>();
-        boxCheckLoop:
+        final List<Sprite> toRemoved = new ArrayList<>();
         for (Sprite box : gateSpritesList) {
             // if the ball collides with the box
             // AND it hits the bottom specifically
@@ -261,7 +260,7 @@ public class BreakoutGate extends BaseGameActivity {
                 BreakoutGate.this.mTileHit.play();
                 checkCollisionDirection(ball, box);
 
-                break boxCheckLoop;
+                break;
             }
         }
         return toRemoved;
@@ -269,15 +268,11 @@ public class BreakoutGate extends BaseGameActivity {
 
     private void removeSprite(final Scene scene, final List<Sprite> toRemoved) {
         // this runs once per update/frame
-        BreakoutGate.this.runOnUpdateThread(new Runnable() {
-
-            @Override
-            public void run() {
-                for (Sprite sprite : toRemoved) {
-                    // remove all of the sprites in the "toRemoved" list
-                    scene.getTopLayer().removeEntity(sprite);
-                    gateSpritesList.remove(sprite);
-                }
+        BreakoutGate.this.runOnUpdateThread(() -> {
+            for (Sprite sprite : toRemoved) {
+                // remove all of the sprites in the "toRemoved" list
+                scene.getTopLayer().removeEntity(sprite);
+                gateSpritesList.remove(sprite);
             }
         });
     }
@@ -492,7 +487,7 @@ public class BreakoutGate extends BaseGameActivity {
     private void resetGame(Scene scene) {
         removeSprite(scene, gateSpritesList);
         // to avoid concurrency issues create a new list rather than reusing the old
-        gateSpritesList = new ArrayList<Sprite>();
+        gateSpritesList = new ArrayList<>();
         fillBoxArea(scene);
     }
 }
