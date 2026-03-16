@@ -324,8 +324,10 @@ public class BreakoutGate extends BaseGameActivity {
                 // then subtracts the width of the paddle,
                 // setting the paddle location to the bottom even if
                 // the touch is not directly on top of the paddle.
-                this.setPosition(pSceneTouchEvent.getX() - this.getWidth() / 2,
-                        centerY);
+                float newX = pSceneTouchEvent.getX() - this.getWidth() / 2;
+                newX = Math.max(newX, 0);
+                newX = Math.min(newX, CAMERA_WIDTH - this.getWidth());
+                this.setPosition(newX, centerY);
                 return true;
             }
         };
