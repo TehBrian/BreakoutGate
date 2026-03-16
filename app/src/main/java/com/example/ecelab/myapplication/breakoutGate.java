@@ -216,7 +216,7 @@ public class BreakoutGate extends BaseGameActivity {
 				/*----------------------------------8<-------------------------------------------
 				// reflect the ball when it hits the paddle
 				if (paddle.collidesWith(ball)) {
-					breakoutGate.this.mPaddleHit.play();
+					BreakoutGate.this.mPaddleHit.play();
 					//ball.setVelocityY(-DEMO_VELOCITY);
 					
 					
