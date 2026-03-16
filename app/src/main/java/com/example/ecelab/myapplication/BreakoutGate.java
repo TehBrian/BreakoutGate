@@ -151,7 +151,7 @@ public class BreakoutGate extends BaseGameActivity {
 
         // these are used to set the position for the paddle sprite
         final int centerX = (CAMERA_WIDTH - this.mPongTextureRegion.getWidth()) / 2;
-        final int centerY = CAMERA_HEIGHT - this.mPongTextureRegion.getHeight();
+        final int centerY = (CAMERA_HEIGHT - this.mPongTextureRegion.getHeight()) - 50;
         final Sprite paddle = setupPaddle(centerX, centerY);
 
         // creates the ball object that bounces around
