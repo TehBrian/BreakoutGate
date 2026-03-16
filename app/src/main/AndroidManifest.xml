@@ -9,7 +9,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="com.example.ecelab.myapplication.breakoutGate"
+            android:name="com.example.ecelab.myapplication.BreakoutGate"
             android:exported="true">
 
             <intent-filter>
