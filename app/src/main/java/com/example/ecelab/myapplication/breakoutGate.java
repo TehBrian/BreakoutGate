@@ -4,8 +4,8 @@
 
 package com.example.ecelab.myapplication;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.graphics.Color;
+import android.graphics.Typeface;
 
 import org.anddev.andengine.audio.sound.Sound;
 import org.anddev.andengine.audio.sound.SoundFactory;
@@ -33,8 +33,8 @@ import org.anddev.andengine.opengl.texture.source.AssetTextureSource;
 import org.anddev.andengine.ui.activity.BaseGameActivity;
 import org.anddev.andengine.util.Debug;
 
-import android.graphics.Color;
-import android.graphics.Typeface;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BreakoutGate extends BaseGameActivity {
 
@@ -155,7 +155,7 @@ public class BreakoutGate extends BaseGameActivity {
         final Sprite paddle = setupPaddle(centerX, centerY);
 
         // creates the ball object that bounces around
-        final Ball ball = new Ball((CAMERA_WIDTH - this.mPongTextureRegion.getWidth()) / 2, CAMERA_HEIGHT - this.mPongTextureRegion.getHeight(),
+        final Ball ball = new Ball((CAMERA_WIDTH - this.mPongTextureRegion.getWidth()) / 2f, CAMERA_HEIGHT - this.mPongTextureRegion.getHeight(),
                 this.mBallTextureRegion);
         // sets the speed of the ball according to the demo velocity
         ball.setVelocity(DEMO_VELOCITY, DEMO_VELOCITY);
@@ -280,7 +280,7 @@ public class BreakoutGate extends BaseGameActivity {
         int screenX = 0;
         TextureRegion texture = this.mGateTextureRegion;
         /*-----------------------------------------------------------------------------*/
-        for (int i = 0; i < Math.floor(CAMERA_WIDTH / blockWidth); i++) {
+        for (int i = 0; i < CAMERA_WIDTH / blockWidth; i++) {
             Sprite gateSprite;
             gateSprite = new Sprite(screenX, 10 + screenY, texture);
             gateSpritesList.add(gateSprite);
@@ -457,7 +457,7 @@ public class BreakoutGate extends BaseGameActivity {
 
     private void resetBall(final Sprite paddle, final Ball ball) {
         /*-----------------------------------------------------------------------------*/
-        ball.setPosition(CAMERA_WIDTH / 2 + ball.getBaseWidth(), CAMERA_HEIGHT / 2 - ball.getBaseHeight());
+        ball.setPosition(CAMERA_WIDTH / 2f + ball.getBaseWidth(), CAMERA_HEIGHT / 2f - ball.getBaseHeight());
 		/*----------------------------------8<-------------------------------------------
 		ball.setPosition(paddle.getX() + ball.getBaseWidth(), paddle.getY() - ball.getBaseHeight());
 		----------------------------------->8-------------------------------------------*/
