@@ -2,19 +2,23 @@
 
 By: Prof. Dean R. Johnson, Electrical and Computer Engineering, Western Michigan University
 
-This lab will examine how a smartphone app is constructed. This exercise complements the hardware exploration of smartphones that are being exploring in the lecture and labs.
+This lab will examine the construction of a smartphone app. This exercise complements the hardware exploration of smartphones in the lecture and other labs.
 
 ![SmartphoneApp.png](SmartphoneApp.png)
 
 ## Overview
 
-In this experiment, you will learn how to write a software application for an Android smartphone. The application is an breakout arcade game about some alien NAND gates gone wild called **breakoutGate**, shown above. The game uses a software game engine called **AndEngine** and the game is written in **Java**. Here are the basic concepts:
+In this experiment, you will tinker with a software application for an **Android** smartphone. The app, called **BreakoutGate**, is a breakout arcade game about defending against alien NAND gates gone rogue. The game utilizes a game engine called **AndEngine** and is written in **Java**.
 
 ## Basic Concepts
 
-1. Software applications may be developed for the Android platform through an Android software development kit (SDK), which is based upon the Java development kit (JDK).
-2. To write Java code for the Android, an interactive development environment (IDE) called **Android Studio** (an editor plus more) is provided.
-3. Games are typically developed through the use of special software add-ons called engines that provide physics and animation. We will be using code from **AndEngine**.
+Software applications may be developed for the Android platform with the Android software development kit (SDK), which is based upon the Java development kit (JDK).
+
+To write code, programmers often use an integrated development environment (IDE), which includes a text editor along with other useful features. **Android Studio** is an IDE specifically built for Android development.
+
+Games are typically developed with **game engines**, which are software frameworks that provide common game-related functions, such as physics, graphics, and animation. **BreakoutGate** uses code from **AndEngine**.
+
+AndEngine is open source and can be found [on a GitHub repository](https://github.com/nicolasgramlich/AndEngine). The engine is outdated and no longer maintained, but it can still be used for Android game development.
 
 ## Tasks
 
