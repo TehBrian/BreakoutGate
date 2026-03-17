@@ -46,7 +46,7 @@ public class BreakoutGate extends BaseGameActivity {
     private static final float DEMO_VELOCITY = 200.0f;
 //	// ========== Lab 8 - Uncomment ========
 //	// time between gate advances
-//	private static final float ADVANCE_DELAY = 1500.0f;
+//	private static final float ADVANCE_DELAY = 15.0f;
 //	// ========== Lab 8 - Uncomment ========
 
     // variable used to manipulate the camera
