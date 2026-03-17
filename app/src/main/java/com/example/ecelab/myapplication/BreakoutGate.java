@@ -44,10 +44,10 @@ public class BreakoutGate extends BaseGameActivity {
     private static final int CAMERA_HEIGHT = 512;
     // the speed of the game
     private static final float DEMO_VELOCITY = 200.0f;
-	/*----------------------------------8<-------------------------------------------
-	// time between gate advances
-	private static final float ADVANCE_DELAY = 1500.0f;
-	----------------------------------->8-------------------------------------------*/
+//	// ========== Lab 8 - Uncomment ========
+//	// time between gate advances
+//	private static final float ADVANCE_DELAY = 1500.0f;
+//	// ========== Lab 8 - Uncomment ========
 
     // variable used to manipulate the camera
     private Camera mCamera;
@@ -76,10 +76,10 @@ public class BreakoutGate extends BaseGameActivity {
     Text nameBox;
     // initialize score to 0 when the game loads
     private int score = 0;
-	/*----------------------------------8<-------------------------------------------
-	// time since last shift
-	private float shiftTime = 0;
-	----------------------------------->8-------------------------------------------*/
+//	// ========== Lab 8 - Uncomment ========
+//	// time since last shift
+//	private float shiftTime = 0;
+//	// ========== Lab 8 - Uncomment ========
 
     // sounds used in the program
     private Sound mTileHit;
@@ -178,25 +178,24 @@ public class BreakoutGate extends BaseGameActivity {
 
             @Override
             public void onUpdate(final float pSecondsElapsed) {
-				
-				/*----------------------------------8<-------------------------------------------
-				shiftTime += pSecondsElapsed;
-				boolean shiftFail = false;
-				if (shiftTime > ADVANCE_DELAY) {
-					shiftTime = 0;
-					for (Sprite gateSprite : gateSpritesList) {
-						gateSprite.setPosition(gateSprite.getX(), gateSprite.getY() + blockHeight);
-						if (gateSprite.getY() + gateSprite.getBaseHeight() > paddle.getY() * 1.05) {
-							shiftFail = true;
-						}
-					}
-					addRow(0, scene);
-				}
-				if (shiftFail) {
-					playerDeath(paddle, ball, 10);
-					resetGame(scene);
-				}
-				----------------------------------->8-------------------------------------------*/
+//              // ========== Lab 8 - Uncomment ========
+//				shiftTime += pSecondsElapsed;
+//				boolean shiftFail = false;
+//				if (shiftTime > ADVANCE_DELAY) {
+//					shiftTime = 0;
+//					for (Sprite gateSprite : gateSpritesList) {
+//						gateSprite.setPosition(gateSprite.getX(), gateSprite.getY() + blockHeight);
+//						if (gateSprite.getY() + gateSprite.getBaseHeight() > paddle.getY() * 1.05) {
+//							shiftFail = true;
+//						}
+//					}
+//					addRow(0, scene);
+//				}
+//				if (shiftFail) {
+//					playerDeath(paddle, ball, 10);
+//					resetGame(scene);
+//				}
+//              // ========== Lab 8 - Uncomment ========
 
                 // detects if the ball falls below the paddle
                 // i.e. lose condition
@@ -207,32 +206,34 @@ public class BreakoutGate extends BaseGameActivity {
                     playerDeath(paddle, ball);
                 }
 
-                /*-----------------------------------------------------------------------------*/
+                // ========== Lab 8 - Comment ========
                 // reflect the ball when it hits the paddle
                 if (paddle.collidesWith(ball)) {
                     BreakoutGate.this.mPaddleHit.play();
                     ball.setVelocityY(-DEMO_VELOCITY);
                 }
-				/*----------------------------------8<-------------------------------------------
-				// reflect the ball when it hits the paddle
-				if (paddle.collidesWith(ball)) {
-					BreakoutGate.this.mPaddleHit.play();
-					//ball.setVelocityY(-DEMO_VELOCITY);
-					
-					
-					//code to make the paddle "curved" so the ball will deflect at different angles when hit with different parts of paddle:
-					// get a positive number that is the quantity of the ratio of the difference from the middle of the ball to middle of the paddle,
-					//	over the half of the width of the paddle.
-					double diff = 
-							Math.abs ( ((ball.getX()+ball.getWidth()/2) - (paddle.getX()+paddle.getWidth()/2)) / (paddle.getWidth()/2) );
-					// set the ball's Y velocity to negative the cosine of the above ratio
-					ball.setVelocityY(-(float)Math.cos(diff)*DEMO_VELOCITY);
-					// set the ball's X velocity to the sine of the above ratio, but keep its original sign
-					ball.setVelocityX(Math.signum(ball.getVelocityX())*(float)Math.sin(diff)*DEMO_VELOCITY );
-					// -- Gabe Petrie
-					
-				}
-				----------------------------------->8-------------------------------------------*/
+                // ========== Lab 8 - Comment ========
+
+//              // ========== Lab 8 - Uncomment ========
+//				// reflect the ball when it hits the paddle
+//				if (paddle.collidesWith(ball)) {
+//					BreakoutGate.this.mPaddleHit.play();
+//					//ball.setVelocityY(-DEMO_VELOCITY);
+//
+//
+//					//code to make the paddle "curved" so the ball will deflect at different angles when hit with different parts of paddle:
+//					// get a positive number that is the quantity of the ratio of the difference from the middle of the ball to middle of the paddle,
+//					//	over the half of the width of the paddle.
+//					double diff =
+//							Math.abs ( ((ball.getX()+ball.getWidth()/2) - (paddle.getX()+paddle.getWidth()/2)) / (paddle.getWidth()/2) );
+//					// set the ball's Y velocity to negative the cosine of the above ratio
+//					ball.setVelocityY(-(float)Math.cos(diff)*DEMO_VELOCITY);
+//					// set the ball's X velocity to the sine of the above ratio, but keep its original sign
+//					ball.setVelocityX(Math.signum(ball.getVelocityX())*(float)Math.sin(diff)*DEMO_VELOCITY );
+//					// -- Gabe Petrie
+//
+//				}
+//              // ========== Lab 8 - Uncomment ========
                 final List<Sprite> toRemoved = checkForCollisions(ball);
 
                 removeSprite(scene, toRemoved);
@@ -277,7 +278,7 @@ public class BreakoutGate extends BaseGameActivity {
     private void addRow(int screenY, final Scene scene) {
         int screenX = 0;
         TextureRegion texture = this.mGateTextureRegion;
-        /*-----------------------------------------------------------------------------*/
+	    // ========== Lab 8 - Comment ========
         for (int i = 0; i < CAMERA_WIDTH / blockWidth; i++) {
             Sprite gateSprite;
             gateSprite = new Sprite(screenX, 10 + screenY, texture);
@@ -285,24 +286,26 @@ public class BreakoutGate extends BaseGameActivity {
             scene.getTopLayer().addEntity(gateSprite);
             screenX += blockWidth;
         }
-		/*----------------------------------8<-------------------------------------------
-		if (delX == 0) {
-			delX = ?;
-			texture = this.mGateTextureRegion; // Draw shifted back gate
-		} else {
-			delX = ?;
-			texture = this.mGateTextureRegion; // Draw front gate
-		}
+	    // ========== Lab 8 - Comment ========
 
-		// this places blocks until there is no more room on the screen
-		for (int i = 0; i < Math.floor((CAMERA_WIDTH - delX) / blockWidth); i++) {
-			Sprite gateSprite;
-			gateSprite = new Sprite(screenX + delX, screenY, texture);
-			gateSpritesList.add(gateSprite);
-			scene.getTopLayer().addEntity(gateSprite);
-			screenX += blockWidth;
-		}
-		----------------------------------->8-------------------------------------------*/
+//	    // ========== Lab 8 - Uncomment ========
+//		if (delX == 0) {
+//			delX = ?;
+//			texture = this.mGateTextureRegion; // Draw shifted back gate
+//		} else {
+//			delX = ?;
+//			texture = this.mGateTextureRegion; // Draw front gate
+//		}
+//
+//		// this places blocks until there is no more room on the screen
+//		for (int i = 0; i < (CAMERA_WIDTH - delX) / blockWidth; i++) {
+//			Sprite gateSprite;
+//			gateSprite = new Sprite(screenX + delX, screenY, texture);
+//			gateSpritesList.add(gateSprite);
+//			scene.getTopLayer().addEntity(gateSprite);
+//			screenX += blockWidth;
+//		}
+//	    // ========== Lab 8 - Uncomment ========
     }
 
     private void fillBoxArea(final Scene scene) {
@@ -456,11 +459,13 @@ public class BreakoutGate extends BaseGameActivity {
     }
 
     private void resetBall(final Sprite paddle, final Ball ball) {
-        /*-----------------------------------------------------------------------------*/
+        // ========== Lab 8 - Comment ========
         ball.setPosition(CAMERA_WIDTH / 2f + ball.getBaseWidth(), CAMERA_HEIGHT / 2f - ball.getBaseHeight());
-		/*----------------------------------8<-------------------------------------------
-		ball.setPosition(paddle.getX() + ball.getBaseWidth(), paddle.getY() - ball.getBaseHeight());
-		----------------------------------->8-------------------------------------------*/
+        // ========== Lab 8 - Comment ========
+
+//	    // ========== Lab 8 - Uncomment ========
+//		ball.setPosition(paddle.getX() + ball.getBaseWidth(), paddle.getY() - ball.getBaseHeight());
+//	    // ========== Lab 8 - Uncomment ========
     }
 
     private void playerDeath(final Sprite paddle, final Ball ball) {
