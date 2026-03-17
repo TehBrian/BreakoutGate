@@ -6,11 +6,17 @@ This lab will examine how a smartphone app is constructed. This exercise complem
 
 ![SmartphoneApp.png](SmartphoneApp.png)
 
+## Overview
+
 In this experiment, you will learn how to write a software application for an Android smartphone. The application is an breakout arcade game about some alien NAND gates gone wild called **breakoutGate**, shown above. The game uses a software game engine called **AndEngine** and the game is written in **Java**. Here are the basic concepts:
+
+## Basic Concepts
 
 1. Software applications may be developed for the Android platform through an Android software development kit (SDK), which is based upon the Java development kit (JDK).
 2. To write Java code for the Android, an interactive development environment (IDE) called **Android Studio** (an editor plus more) is provided.
 3. Games are typically developed through the use of special software add-ons called engines that provide physics and animation. We will be using code from **AndEngine**.
+
+## Tasks
 
 The Tasks are as follows:
 
