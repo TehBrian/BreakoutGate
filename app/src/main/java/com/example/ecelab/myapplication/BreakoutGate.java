@@ -60,7 +60,7 @@ public class BreakoutGate extends BaseGameActivity {
     private TextureRegion mGate2TextureRegion;
     // texture region for the balls
     private TiledTextureRegion mBallTextureRegion;
-    // List that holds all of the gates
+    // list that holds all the gates
     private List<Sprite> gateSpritesList = new ArrayList<>();
     // holds the font for the scoreboard
     private Font mFont;
@@ -192,7 +192,7 @@ public class BreakoutGate extends BaseGameActivity {
 //					addRow(0, scene);
 //				}
 //				if (shiftFail) {
-//					playerDeath(paddle, ball, 10);
+//					playerDeath(paddle, ball, -10);
 //					resetGame(scene);
 //				}
 //              // ========== Lab 8 - Uncomment ========
@@ -203,7 +203,7 @@ public class BreakoutGate extends BaseGameActivity {
                 // this may be changed to have more drastic consequences such as
                 // restarting the entire game
                 if (ballBelowPaddle(paddle, ball)) {
-                    playerDeath(paddle, ball);
+                    playerDeath(paddle, ball, -1);
                 }
 
                 // ========== Lab 8 - Comment ========
@@ -234,6 +234,7 @@ public class BreakoutGate extends BaseGameActivity {
 //
 //				}
 //              // ========== Lab 8 - Uncomment ========
+
                 final List<Sprite> toRemoved = checkForCollisions(ball);
 
                 removeSprite(scene, toRemoved);
@@ -290,10 +291,10 @@ public class BreakoutGate extends BaseGameActivity {
 
 //	    // ========== Lab 8 - Uncomment ========
 //		if (delX == 0) {
-//			delX = ?;
+//			delX = ???;
 //			texture = this.mGateTextureRegion; // Draw shifted back gate
 //		} else {
-//			delX = ?;
+//			delX = ???;
 //			texture = this.mGateTextureRegion; // Draw front gate
 //		}
 //
@@ -468,9 +469,9 @@ public class BreakoutGate extends BaseGameActivity {
 //	    // ========== Lab 8 - Uncomment ========
     }
 
-    private void playerDeath(final Sprite paddle, final Ball ball) {
+    private void playerDeath(final Sprite paddle, final Ball ball, final int scoreDelta) {
         this.mDeath.play();
-        this.updateScore(-1);
+        this.updateScore(scoreDelta);
         resetBall(paddle, ball);
     }
 
