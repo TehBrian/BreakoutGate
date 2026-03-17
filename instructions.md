@@ -31,10 +31,10 @@ AndEngine is open source and can be found [on a GitHub repository](https://githu
    * If you're performing this experiment on your personal computer, you will need to install Android Studio by following the link above. Android Studio is compatible with Windows, macOS, and Linux. The installation may take up to an hour.
 2. Download the [BreakoutGate App](https://webwriters.com/ece2500/zybook/BreakoutGate-v3.zip) ZIP file from the link. Extract it into a folder.
 3. In Android Studio, open the folder as a project.
-4. Wait until the project finishes indexing/loading.
+4. Wait until the project finishes importing.
 5. Click the green play button at the top right to run the app.
    - If the play button is grayed out, ensure that a valid Android emulator exists.
-   - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists with this configuration: Pixel 5, Android 11 ("R"), Software graphics acceleration.
+   - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists with this configuration: Pixel 5, "R" (API 30, Android 11), "Software" graphics acceleration.
    - Feel free to ask the TA for help!
 6. If it works, you should see NAND gate bricks forming inverter circuits as shown in the lab image on the left.
 
