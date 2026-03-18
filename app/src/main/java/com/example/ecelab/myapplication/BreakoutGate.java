@@ -89,10 +89,10 @@ public class BreakoutGate extends BaseGameActivity {
     // current delta X for drawing gates
     int delX = 0;
     // the width of the blocks to be drawn
-    final int blockWidth = 36;
-    final int blockHeight = 48;
+    final int blockWidth = 48;
+    final int blockHeight = 60;
     // number of rows to draw on the scene
-    final int numRows = 4;
+    final int numRows = 3;
 
     // this is run when the game is first loaded.
     // i.e. when the application is launched
@@ -403,9 +403,9 @@ public class BreakoutGate extends BaseGameActivity {
         this.mBallTextureRegion = TextureRegionFactory.createTiledFromAsset(
                 this.mTexture, this, "gfx/ball.png", 97, 0, 1, 1);
         this.mGateTextureRegion = TextureRegionFactory.createFromAsset(
-                this.mTexture, this, "gfx/NANDsmallBlue.png", 114, 0);
+                this.mTexture, this, "gfx/NANDlargeBlue.png", 114, 0);
         this.mGate2TextureRegion = TextureRegionFactory.createFromAsset(
-                this.mTexture, this, "gfx/OR2B2smallGreen.png", 228, 0);
+                this.mTexture, this, "gfx/OR2B2largeGreen.png", 228, 0);
         // end initialize textures
 
         // loads the texture for the entire screen
