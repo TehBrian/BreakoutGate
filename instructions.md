@@ -44,9 +44,11 @@ Additional resource: [Create your first Android app](https://developer.android.c
 
 If you have an Android device, try downloading the app onto it.
 
-1. Connect your Android device to the computer. 
-2. Find `breakout.apk` in the `bin` folder on the computer. 
-3. Drag it into your `Dropouts` Android folder. Click it.
+1. Connect your Android device to the computer via USB cable. 
+2. Open the target device menu at the top right of Android Studio. 
+   - The target device menu is to the left of the green play button and the run configurations menu.
+3. Select your device from the dropdown.
+4. Click the green play button.
 
 ### (3) Things to experiment with
 
