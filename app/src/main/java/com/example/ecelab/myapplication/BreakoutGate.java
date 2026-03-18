@@ -143,7 +143,7 @@ public class BreakoutGate extends BaseGameActivity {
                 "Score: ", "Score: xxxxx".length());
         // sets the name box with the given font
         nameBox = new Text(430, CAMERA_HEIGHT - 170, this.mFont2,
-                "by Cody Shanley");
+                "by Cody Herring");
 
         // adds the score display to the screen
         scene.getTopLayer().addEntity(scoreBox);
