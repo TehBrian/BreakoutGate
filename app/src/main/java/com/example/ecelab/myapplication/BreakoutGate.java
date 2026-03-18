@@ -86,9 +86,6 @@ public class BreakoutGate extends BaseGameActivity {
     private Sound mPaddleHit;
     private Sound mDeath;
 
-    // current delta X for drawing gates
-    int delX = 0;
-
     // ========== Lab Q6 - Comment ==========
     // the width of the blocks to be drawn
     final int blockWidth = 48;
@@ -97,13 +94,15 @@ public class BreakoutGate extends BaseGameActivity {
     final int numRows = 3;
     // ========== Lab Q6 - Comment ==========
 
-//    // ========== Lab Q6 - Uncomment ==========
-//    // the width of the blocks to be drawn
-//    final int blockWidth = 36;
-//    final int blockHeight = 48;
-//    // number of rows to draw on the scene
-//    final int numRows = 4;
-//    // ========== Lab Q6 - Uncomment ==========
+//  // ========== Lab Q6 - Uncomment ==========
+//  // current delta X for drawing gates
+//  int delX = 0;
+//  // the width of the blocks to be drawn
+//  final int blockWidth = 36;
+//  final int blockHeight = 48;
+//  // number of rows to draw on the scene
+//  final int numRows = 4;
+//  // ========== Lab Q6 - Uncomment ==========
 
     // this is run when the game is first loaded.
     // i.e. when the application is launched
