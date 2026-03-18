@@ -12,9 +12,9 @@ In this experiment, you will tinker with a software application for an **Android
 
 ## Basic Concepts
 
-Software applications may be developed for the Android platform with the Android software development kit (SDK), which is based upon the Java development kit (JDK).
+Software applications may be developed for the Android platform with the Android **software development kit** (SDK), which is based upon the Java development kit (JDK).
 
-To write code, programmers often use an integrated development environment (IDE), which includes a text editor along with other useful features. **Android Studio** is an IDE specifically built for Android development.
+To write code, programmers often use an **integrated development environment** (IDE), which includes a text editor along with other useful features. **Android Studio** is an IDE specifically built for Android development.
 
 Android Studio makes it easy to test your app by running Android **emulators**, which can mimic Android smartphones.
 
@@ -34,9 +34,9 @@ AndEngine is open source and can be found [on a GitHub repository](https://githu
 4. Wait until the project finishes importing.
 5. Click the green play button at the top right to run the app.
    - If the play button is grayed out, ensure that a valid Android emulator exists.
-   - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists with this configuration: Pixel 5, API 30 "R" (Android 11), "Software" graphics acceleration.
+   - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists with this configuration: Pixel 5, API 30 "R" (Android 11), **Software** graphics acceleration.
    - Feel free to ask the TA for help!
-6. If it works, you should see NAND gate bricks forming inverter circuits as shown in the lab image on the left.
+6. If it works, you should see NAND gate bricks forming inverter circuits as shown to the left of the lab image above.
 
 Additional resource: [Create your first Android app](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app)
 
