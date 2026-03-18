@@ -64,18 +64,21 @@ Please refer to the lab image above for emulator screen dimensions and correspon
    - Search for `nameBox` (using Ctrl+F) and change “Cody Herring” (the student who originally created this app) with your name. Center it on the line.
 3. \* Change the color of the NAND gate brick. 
    - Search for `NANDlargeBlue.png` and change it to `NANDlargeRed.png`.
-   - (See the files in the graphics `gfx` assets folder (`src/main/assets/gfx`) also shown on small images above.)
-   - Copy the resulting `this.mTexture` line of code to the export tester and validate your statement by running the output tester.
+   - (See the images in the GFX assets folder (`src/main/assets/gfx`), also shown as small images in the lab image above.)
+   - Copy the resulting `this.mTexture` line of code to the code area, and validate it by running the output tester.
 4. \* Make SOP NAND circuits.
-   - Now let's try some harder things. Right shifting every other row of NAND bricks by ½ brick will cause the NAND gates to form SOP circuits.
-   - Your instructor will show you how to use an if-else statement to do this, shifting every other row of gates (the back gates) by `delX = blockWidth/2`.
-   - Copy this section of code to the export tester and validate your statement by running the output tester.
+   - Now, let's try something harder. Right shifting every other row of NAND gate bricks by ½ brick will cause the NAND gates to form SOP circuits.
+   - The goal is to shift every other row by `blockWidth / 2`. Your instructor will show you how to use an if-else statement to do this. 
+   - Copy the resulting section of code to the code area, and validate it by running the output tester.
 5. \* Make proper form SOP circuits. 
-   - The SOP circuits in Step 4 are not drawn in 2-level proper form. Replace the shifted Red NAND gates with Green OR2B2 gates (see `gfx` folder assets image above).
-   - Copy the resulting `this.mTexture` line of code to the export tester and validate your statement by running the output tester.
+   - The SOP circuits from Step 4 are not drawn in proper 2-level form. Replace the shifted Red NAND gates with Green OR2B2 gates.
+   - (Hint: Change `this.mGateTextureRegion` to `this.mGate2TextureRegion`.)
+   - Copy the resulting section of code to the code area, and validate it by running the output tester.
 6. \* Increase the number of gates.
-   - Now replace all the large gates with small gates from the `gfx` assets folder and increase the number of rows of gates in the display, as shown above on right.
-   - (If the ball launch is interfered by the lower rows of the gate bricks, lower the ball launching point on the screen.)
-   - Copy the resulting `final Ball ball` line of code to the export tester and validate your statement by running the output tester.
+   - Now, replace the large gates with small gates from the GFX assets folder, and increase the number of rows of gates (`numRows`).
+   - (You will also need to adjust `blockWidth` and `blockHeight` to match the new gate size.)
+   - The resulting grid should look like the arrangement shown to the right of the lab image above.
+   - (The lower rows of the gate bricks may interfere with the ball launching, so you may also need to lower the ball's launch point on the screen.)
+   - Copy the resulting section of code to the code area, and validate it by running the output tester.
 
 Press **Submit** to record the 12 points for this lab.
