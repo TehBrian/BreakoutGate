@@ -403,9 +403,9 @@ public class BreakoutGate extends BaseGameActivity {
         this.mBallTextureRegion = TextureRegionFactory.createTiledFromAsset(
                 this.mTexture, this, "gfx/ball.png", 97, 0, 1, 1);
         this.mGateTextureRegion = TextureRegionFactory.createFromAsset(
-                this.mTexture, this, "gfx/NANDlargeBlue.png", 114, 0);
+                this.mTexture, this, "gfx/NANDsmallBlue.png", 114, 0);
         this.mGate2TextureRegion = TextureRegionFactory.createFromAsset(
-                this.mTexture, this, "gfx/OR2B2largeGreen.png", 228, 0);
+                this.mTexture, this, "gfx/OR2B2smallGreen.png", 228, 0);
         // end initialize textures
 
         // loads the texture for the entire screen
