@@ -34,7 +34,7 @@ AndEngine is open source and can be found [on a GitHub repository](https://githu
 4. Wait until the project finishes importing.
 5. Click the green play button at the top right to run the app.
    - If the play button is grayed out, ensure that a valid Android emulator exists.
-   - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists with this configuration: Pixel 5, "R" (API 30, Android 11), "Software" graphics acceleration.
+   - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists with this configuration: Pixel 5, API 30 "R" (Android 11), "Software" graphics acceleration.
    - Feel free to ask the TA for help!
 6. If it works, you should see NAND gate bricks forming inverter circuits as shown in the lab image on the left.
 
