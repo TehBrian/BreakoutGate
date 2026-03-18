@@ -278,8 +278,9 @@ public class BreakoutGate extends BaseGameActivity {
 
     private void addRow(int screenY, final Scene scene) {
         int screenX = 0;
-        TextureRegion texture = this.mGateTextureRegion;
+
 	    // ========== Lab - Comment ========
+        TextureRegion texture = this.mGateTextureRegion;
         for (int i = 0; i < CAMERA_WIDTH / blockWidth; i++) {
             Sprite gateSprite;
             gateSprite = new Sprite(screenX, 10 + screenY, texture);
@@ -290,6 +291,7 @@ public class BreakoutGate extends BaseGameActivity {
 	    // ========== Lab - Comment ========
 
 //	    // ========== Lab - Uncomment ========
+//      TextureRegion texture;
 //		if (delX == 0) {
 //			delX = ???;
 //			texture = this.mGateTextureRegion; // Draw shifted back gate
