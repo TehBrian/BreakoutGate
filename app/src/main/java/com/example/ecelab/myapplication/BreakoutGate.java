@@ -44,10 +44,10 @@ public class BreakoutGate extends BaseGameActivity {
     private static final int CAMERA_HEIGHT = 512;
     // the speed of the game
     private static final float DEMO_VELOCITY = 200.0f;
-//	// ========== Lab 8 - Uncomment ========
+//	// ========== Lab - Uncomment ========
 //	// time between gate advances
 //	private static final float ADVANCE_DELAY = 15.0f;
-//	// ========== Lab 8 - Uncomment ========
+//	// ========== Lab - Uncomment ========
 
     // variable used to manipulate the camera
     private Camera mCamera;
@@ -76,10 +76,10 @@ public class BreakoutGate extends BaseGameActivity {
     Text nameBox;
     // initialize score to 0 when the game loads
     private int score = 0;
-//	// ========== Lab 8 - Uncomment ========
+//	// ========== Lab - Uncomment ========
 //	// time since last shift
 //	private float shiftTime = 0;
-//	// ========== Lab 8 - Uncomment ========
+//	// ========== Lab - Uncomment ========
 
     // sounds used in the program
     private Sound mTileHit;
@@ -178,7 +178,7 @@ public class BreakoutGate extends BaseGameActivity {
 
             @Override
             public void onUpdate(final float pSecondsElapsed) {
-//              // ========== Lab 8 - Uncomment ========
+//              // ========== Lab - Uncomment ========
 //				shiftTime += pSecondsElapsed;
 //				boolean shiftFail = false;
 //				if (shiftTime > ADVANCE_DELAY) {
@@ -195,7 +195,7 @@ public class BreakoutGate extends BaseGameActivity {
 //					playerDeath(paddle, ball, -10);
 //					resetGame(scene);
 //				}
-//              // ========== Lab 8 - Uncomment ========
+//              // ========== Lab - Uncomment ========
 
                 // detects if the ball falls below the paddle
                 // i.e. lose condition
@@ -206,15 +206,15 @@ public class BreakoutGate extends BaseGameActivity {
                     playerDeath(paddle, ball, -1);
                 }
 
-                // ========== Lab 8 - Comment ========
+                // ========== Lab - Comment ========
                 // reflect the ball when it hits the paddle
                 if (paddle.collidesWith(ball)) {
                     BreakoutGate.this.mPaddleHit.play();
                     ball.setVelocityY(-DEMO_VELOCITY);
                 }
-                // ========== Lab 8 - Comment ========
+                // ========== Lab - Comment ========
 
-//              // ========== Lab 8 - Uncomment ========
+//              // ========== Lab - Uncomment ========
 //				// reflect the ball when it hits the paddle
 //				if (paddle.collidesWith(ball)) {
 //					BreakoutGate.this.mPaddleHit.play();
@@ -233,7 +233,7 @@ public class BreakoutGate extends BaseGameActivity {
 //					// -- Gabe Petrie
 //
 //				}
-//              // ========== Lab 8 - Uncomment ========
+//              // ========== Lab - Uncomment ========
 
                 final List<Sprite> toRemoved = checkForCollisions(ball);
 
@@ -279,7 +279,7 @@ public class BreakoutGate extends BaseGameActivity {
     private void addRow(int screenY, final Scene scene) {
         int screenX = 0;
         TextureRegion texture = this.mGateTextureRegion;
-	    // ========== Lab 8 - Comment ========
+	    // ========== Lab - Comment ========
         for (int i = 0; i < CAMERA_WIDTH / blockWidth; i++) {
             Sprite gateSprite;
             gateSprite = new Sprite(screenX, 10 + screenY, texture);
@@ -287,9 +287,9 @@ public class BreakoutGate extends BaseGameActivity {
             scene.getTopLayer().addEntity(gateSprite);
             screenX += blockWidth;
         }
-	    // ========== Lab 8 - Comment ========
+	    // ========== Lab - Comment ========
 
-//	    // ========== Lab 8 - Uncomment ========
+//	    // ========== Lab - Uncomment ========
 //		if (delX == 0) {
 //			delX = ???;
 //			texture = this.mGateTextureRegion; // Draw shifted back gate
@@ -306,7 +306,7 @@ public class BreakoutGate extends BaseGameActivity {
 //			scene.getTopLayer().addEntity(gateSprite);
 //			screenX += blockWidth;
 //		}
-//	    // ========== Lab 8 - Uncomment ========
+//	    // ========== Lab - Uncomment ========
     }
 
     private void fillBoxArea(final Scene scene) {
@@ -460,13 +460,13 @@ public class BreakoutGate extends BaseGameActivity {
     }
 
     private void resetBall(final Sprite paddle, final Ball ball) {
-        // ========== Lab 8 - Comment ========
+        // ========== Lab - Comment ========
         ball.setPosition(CAMERA_WIDTH / 2f + ball.getBaseWidth(), CAMERA_HEIGHT / 2f - ball.getBaseHeight());
-        // ========== Lab 8 - Comment ========
+        // ========== Lab - Comment ========
 
-//	    // ========== Lab 8 - Uncomment ========
+//	    // ========== Lab - Uncomment ========
 //		ball.setPosition(paddle.getX() + ball.getBaseWidth(), paddle.getY() - ball.getBaseHeight());
-//	    // ========== Lab 8 - Uncomment ========
+//	    // ========== Lab - Uncomment ========
     }
 
     private void playerDeath(final Sprite paddle, final Ball ball, final int scoreDelta) {
