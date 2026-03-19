@@ -20,6 +20,8 @@ To write code, programmers often use an **integrated development environment** (
 
 Android Studio makes it easy to test your app by running Android **emulators**, which can mimic Android smartphones.
 
+Additional resource: [Create your first Android app with Android Studio](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app)
+
 ---
 
 Games are typically developed with **game engines**, which are software frameworks that provide common game-related functions, such as physics, graphics, and animation. **BreakoutGate** uses code from **AndEngine**.
@@ -42,8 +44,6 @@ AndEngine is open source and can be found [on a GitHub repository](https://githu
    - If using the lab PCs, ensure the Virtual Device has this configuration: Pixel 5, API 30 "R" (Android 11), **Software** graphics acceleration.
    - Feel free to ask the TA for help!
 6. If it works, you should see NAND gate bricks forming inverter circuits as shown to the left of the lab image above.
-
-Additional resource: [Create your first Android app](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app)
 
 ### (2) (Optional) Download the app onto your Android device
 
