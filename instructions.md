@@ -50,7 +50,7 @@ If you have an Android device, try downloading the app onto it.
 3. Select your device from the dropdown.
 4. Click the green play button.
 
-### (3) Things to experiment with
+### (3) Experiment with the code
 
 Here are things you can modify in the Java code to alter the game, some for \*points.
 
