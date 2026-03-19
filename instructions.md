@@ -61,8 +61,6 @@ Here are things you can modify in the Java code to alter the game, some for \*po
 
 The Java code can be found in `src/main/java/com/example/ecelab/myapplication/BreakoutGate.java`.
 
-Please refer to the lab image above for emulator screen dimensions and corresponding variables.
-
 1. (Q1) Alter the velocity of the ball.
    - Change the value of `DEMO_VELOCITY` at the beginning of the code.
 2. (Q2) Put your name on the screen. 
