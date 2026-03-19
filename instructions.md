@@ -14,9 +14,13 @@ In this experiment, you will tinker with a software application for an **Android
 
 Software applications may be developed for the Android platform with the Android **software development kit** (SDK), which is based upon the Java development kit (JDK).
 
+---
+
 To write code, programmers often use an **integrated development environment** (IDE), which includes a text editor along with other useful features. **Android Studio** is an IDE specifically built for Android development.
 
 Android Studio makes it easy to test your app by running Android **emulators**, which can mimic Android smartphones.
+
+---
 
 Games are typically developed with **game engines**, which are software frameworks that provide common game-related functions, such as physics, graphics, and animation. **BreakoutGate** uses code from **AndEngine**.
 
