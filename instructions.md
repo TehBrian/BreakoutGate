@@ -100,5 +100,10 @@ search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as 
      - Lower the ball's launch point on the screen to prevent the lower rows of the gate bricks interfering with the ball launching.
    - The resulting grid should look like the arrangement shown to the right of the lab image above.
    - Copy the resulting `this.mGateTextureRegion = ...` section of code (four lines total) to the zyBooks code area, and validate it by running the output tester.
+7. Make the NAND gate bricks shift down over time.
+   - Comment/uncomment the code sections tagged with `Lab Q7`.
+8. Change the paddle to a curved paddle.
+   - Comment/uncomment the code sections tagged with `Lab Q8`.
+   - Change `pong.png` to `pongCurved.png`.
 
 Press **Submit** to record the 12 points for this lab.
