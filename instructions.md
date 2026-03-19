@@ -131,10 +131,15 @@ search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as 
     - The resulting grid should look like the arrangement shown to the right of the lab image above.
     - Copy the resulting `this.mGateTextureRegion = ...` section of code (four lines total) to the
       zyBooks code area, and validate it by running the output tester.
-7. Make the NAND gate bricks shift down over time.
+7. (Q7) Launch the ball from the middle of the pong.
     - Comment/uncomment the code sections tagged with `Lab Q7`.
-8. Change the paddle to a curved paddle.
-    - Comment/uncomment the code sections tagged with `Lab Q8`.
+8. (Q8) Make the NAND gate bricks shift down over time.
+    - Comment/uncomment the code sections tagged with `Lab Q8`. This will:
+      - Move rows of hungry NANDs downward, toward the shooter, like an alien arcade game.
+      - Feed more rows down from the top.
+9. (Q9) Change the paddle to a curved paddle.
+    - Comment/uncomment the code sections tagged with `Lab Q9`. This will:
+      - Make the ball deflect at non-45° if struck at paddle edges.
     - Change `pong.png` to `pongCurved.png`.
 
 Press **Submit** to record the 12 points for this lab.
