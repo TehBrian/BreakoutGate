@@ -141,5 +141,10 @@ search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as 
     - Comment/uncomment the code sections tagged with `Lab Q9`. This will:
       - Make the ball deflect at non-45° if struck at paddle edges.
     - Change `pong.png` to `pongCurved.png`.
+10. Anything else you'd like! Here are further ideas:
+    - Add a defeat screen if the score becomes too negative.
+    - Add a victory screen if the player defeats all the aliens.
+    - Add a countdown before the game starts.
+    - Add a pause menu.
 
 Press **Submit** to record the 12 points for this lab.
