@@ -58,23 +58,23 @@ The Java code can be found in `src/main/java/com/example/ecelab/myapplication/Br
 
 Please refer to the lab image above for emulator screen dimensions and corresponding variables.
 
-1. Alter the velocity of the ball.
+1. (Q1) Alter the velocity of the ball.
    - Change the value of `DEMO_VELOCITY` at the beginning of the code.
-2. Put your name on the screen. 
+2. (Q2) Put your name on the screen. 
    - Search for `nameBox` (using Ctrl+F) and change “Cody Herring” (the student who originally created this app) with your name. Center it on the line.
-3. \* Change the color of the NAND gate brick. 
+3. \* (Q3) Change the color of the NAND gate brick. 
    - Search for `NANDlargeBlue.png` and change it to `NANDlargeRed.png`.
    - (See the images in the GFX assets folder (`src/main/assets/gfx`), also shown as small images in the lab image above.)
    - Copy the resulting `this.mTexture` line of code to the code area, and validate it by running the output tester.
-4. \* Make SOP NAND circuits.
+4. \* (Q4) Make SOP NAND circuits.
    - Now, let's try something harder. Right shifting every other row of NAND gate bricks by ½ brick will cause the NAND gates to form SOP circuits.
    - The goal is to shift every other row by `blockWidth / 2`. Your instructor will show you how to use an if-else statement to do this. 
    - Copy the resulting section of code to the code area, and validate it by running the output tester.
-5. \* Make proper form SOP circuits. 
+5. \* (Q5) Make proper form SOP circuits. 
    - The SOP circuits from Step 4 are not drawn in proper 2-level form. Replace the shifted Red NAND gates with Green OR2B2 gates.
    - (Hint: Change `this.mGateTextureRegion` to `this.mGate2TextureRegion`.)
    - Copy the resulting section of code to the code area, and validate it by running the output tester.
-6. \* Increase the number of gates.
+6. \* (Q6) Increase the number of gates.
    - Now, replace the large gates with small gates from the GFX assets folder, and increase the number of rows of gates (`numRows`).
    - (You will also need to adjust `blockWidth` and `blockHeight` to match the new gate size.)
    - The resulting grid should look like the arrangement shown to the right of the lab image above.
