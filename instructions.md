@@ -61,6 +61,17 @@ Here are things you can modify in the Java code to alter the game, some for \*po
 
 The Java code can be found in `src/main/java/com/example/ecelab/myapplication/BreakoutGate.java`.
 
+---
+
+Some steps require you to comment/uncomment sections of code.
+
+To do so, select a section, then press Ctrl+/.
+
+Each section will be tagged with the corresponding question. For example, Q4 will require you to
+search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as instructed.
+
+---
+
 1. (Q1) Alter the velocity of the ball.
    - Change the value of `DEMO_VELOCITY` at the beginning of the code.
 2. (Q2) Put your name on the screen. 
