@@ -44,10 +44,11 @@ public class BreakoutGate extends BaseGameActivity {
     private static final int CAMERA_HEIGHT = 512;
     // the speed of the game
     private static final float DEMO_VELOCITY = 200.0f;
-//	// ========== Lab Extra (Shift Down) - Uncomment ========
+
+//	// ========== Lab Q7 - Uncomment ========
 //	// time between gate advances
 //	private static final float ADVANCE_DELAY = 15.0f;
-//	// ========== Lab Extra (Shift Down) - Uncomment ========
+//	// ========== Lab Q7 - Uncomment ========
 
     // variable used to manipulate the camera
     private Camera mCamera;
@@ -76,10 +77,11 @@ public class BreakoutGate extends BaseGameActivity {
     Text nameBox;
     // initialize score to 0 when the game loads
     private int score = 0;
-//	// ========== Lab Extra (Shift Down) - Uncomment ========
+
+//	// ========== Lab Q7 - Uncomment ========
 //	// time since last shift
 //	private float shiftTime = 0;
-//	// ========== Lab Extra (Shift Down) - Uncomment ========
+//	// ========== Lab Q7 - Uncomment ========
 
     // sounds used in the program
     private Sound mTileHit;
@@ -191,24 +193,24 @@ public class BreakoutGate extends BaseGameActivity {
 
             @Override
             public void onUpdate(final float pSecondsElapsed) {
-//              // ========== Lab Extra (Shift Down) - Uncomment ========
-//				shiftTime += pSecondsElapsed;
-//				boolean shiftFail = false;
-//				if (shiftTime > ADVANCE_DELAY) {
-//					shiftTime = 0;
-//					for (Sprite gateSprite : gateSpritesList) {
-//						gateSprite.setPosition(gateSprite.getX(), gateSprite.getY() + blockHeight);
-//						if (gateSprite.getY() + gateSprite.getBaseHeight() > paddle.getY() * 1.05) {
-//							shiftFail = true;
-//						}
-//					}
-//					addRow(0, scene);
-//				}
-//				if (shiftFail) {
-//					playerDeath(paddle, ball, -10);
-//					resetGame(scene);
-//				}
-//              // ========== Lab Extra (Shift Down) - Uncomment ========
+//              // ========== Lab Q7 - Uncomment ========
+//              shiftTime += pSecondsElapsed;
+//              boolean shiftFail = false;
+//              if (shiftTime > ADVANCE_DELAY) {
+//                  shiftTime = 0;
+//                  for (Sprite gateSprite : gateSpritesList) {
+//                      gateSprite.setPosition(gateSprite.getX(), gateSprite.getY() + blockHeight);
+//                      if (gateSprite.getY() + gateSprite.getBaseHeight() > paddle.getY() * 1.05) {
+//                          shiftFail = true;
+//                      }
+//                  }
+//                  addRow(0, scene);
+//              }
+//              if (shiftFail) {
+//                  playerDeath(paddle, ball, -10);
+//                  resetGame(scene);
+//              }
+//              // ========== Lab Q7 - Uncomment ========
 
                 // detects if the ball falls below the paddle
                 // i.e. lose condition
@@ -219,15 +221,15 @@ public class BreakoutGate extends BaseGameActivity {
                     playerDeath(paddle, ball, -1);
                 }
 
-                // ========== Lab Extra (Better Physics) - Comment ========
+                // ========== Lab Q8 - Comment ========
                 // reflect the ball when it hits the paddle
                 if (paddle.collidesWith(ball)) {
                     BreakoutGate.this.mPaddleHit.play();
                     ball.setVelocityY(-DEMO_VELOCITY);
                 }
-                // ========== Lab Extra (Better Physics) - Comment ========
+                // ========== Lab Q8 - Comment ========
 
-//              // ========== Lab Extra (Better Physics) - Uncomment ========
+//              // ========== Lab Q8 - Uncomment ========
 //				// reflect the ball when it hits the paddle
 //				if (paddle.collidesWith(ball)) {
 //					BreakoutGate.this.mPaddleHit.play();
@@ -245,7 +247,7 @@ public class BreakoutGate extends BaseGameActivity {
 //					ball.setVelocityX(Math.signum(ball.getVelocityX())*(float)Math.sin(diff)*DEMO_VELOCITY );
 //					// -- Gabe Petrie
 //				}
-//              // ========== Lab Extra (Better Physics) - Uncomment ========
+//              // ========== Lab Q8 - Uncomment ========
 
                 final List<Sprite> toRemoved = checkForCollisions(ball);
 
@@ -406,7 +408,7 @@ public class BreakoutGate extends BaseGameActivity {
     }
 
     private void initTextures() {
-        // initializes all of the texture regions
+        // initializes all the texture regions
         // do not change this area unless you know what you're doing
         this.mTexture = new Texture(512, 128,
                 TextureOptions.BILINEAR_PREMULTIPLYALPHA);
