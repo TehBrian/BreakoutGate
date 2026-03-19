@@ -90,7 +90,7 @@ public class BreakoutGate extends BaseGameActivity {
 
 //  // ========== Lab Q4 - Uncomment ==========
 //  // current delta X for drawing gates
-//  int delX = 0;
+//  int deltaX = 0;
 //  // ========== Lab Q4 - Uncomment ==========
 
     // ========== Lab Q6 - Comment ==========
@@ -306,18 +306,18 @@ public class BreakoutGate extends BaseGameActivity {
 
 //	    // ========== Lab Q4 - Uncomment ========
 //      TextureRegion texture;
-//		if (delX == 0) {
-//			delX = ???;
+//		if (deltaX == 0) {
+//			deltaX = ???;
 //			texture = this.mGateTextureRegion; // Draw shifted back gate
 //		} else {
-//			delX = ???;
+//			deltaX = ???;
 //			texture = this.mGateTextureRegion; // Draw front gate
 //		}
 //
 //		// this places blocks until there is no more room on the screen
-//		for (int i = 0; i < (CAMERA_WIDTH - delX) / blockWidth; i++) {
+//		for (int i = 0; i < (CAMERA_WIDTH - deltaX) / blockWidth; i++) {
 //			Sprite gateSprite;
-//			gateSprite = new Sprite(screenX + delX, screenY, texture);
+//			gateSprite = new Sprite(screenX + deltaX, screenY, texture);
 //			gateSpritesList.add(gateSprite);
 //			scene.getTopLayer().addEntity(gateSprite);
 //			screenX += blockWidth;
