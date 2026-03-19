@@ -75,7 +75,8 @@ search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as 
 1. (Q1) Alter the velocity of the ball.
    - Change the value of `DEMO_VELOCITY` at the beginning of the code.
 2. (Q2) Put your name on the screen. 
-   - Search for `nameBox` (using Ctrl+F) and change “Cody Herring” (the student who originally created this app) with your name. Center it on the line.
+   - Search for `nameBox` (using Ctrl+F), and change “Cody Herring” (the student who originally created this app) to your name.
+   - Center it on the screen by adjusting the first argument of `new Text()`, which is initially `300`.
 3. \* (Q3) Change the color of the NAND gate brick. 
    - Search for `NANDlargeBlue.png` and change it to `NANDlargeRed.png`.
    - (See the images in the GFX assets folder (`src/main/assets/gfx`), also shown as small images in the lab image above.)
