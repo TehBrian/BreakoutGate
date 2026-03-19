@@ -42,7 +42,7 @@ AndEngine is open source and can be found [on a GitHub repository](https://githu
    - If the play button is grayed out, ensure that a valid Android emulator exists.
    - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists.
    - If using the lab PCs, ensure the Virtual Device has this configuration: Pixel 5, API 30 "R" (Android 11), **Software** graphics acceleration.
-   - Feel free to ask the TA for help!
+   - Feel free to ask your instructor for help!
 6. If it works, you should see NAND gate bricks forming inverter circuits as shown to the left of the lab image above.
 
 ### (2) (Optional) Download the app onto your Android device
