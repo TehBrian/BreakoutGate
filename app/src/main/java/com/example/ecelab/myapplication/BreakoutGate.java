@@ -86,6 +86,11 @@ public class BreakoutGate extends BaseGameActivity {
     private Sound mPaddleHit;
     private Sound mDeath;
 
+//  // ========== Lab Q4 - Uncomment ==========
+//  // current delta X for drawing gates
+//  int delX = 0;
+//  // ========== Lab Q4 - Uncomment ==========
+
     // ========== Lab Q6 - Comment ==========
     // the width of the blocks to be drawn
     final int blockWidth = 48;
@@ -95,8 +100,6 @@ public class BreakoutGate extends BaseGameActivity {
     // ========== Lab Q6 - Comment ==========
 
 //  // ========== Lab Q6 - Uncomment ==========
-//  // current delta X for drawing gates
-//  int delX = 0;
 //  // the width of the blocks to be drawn
 //  final int blockWidth = 36;
 //  final int blockHeight = 48;
