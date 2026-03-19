@@ -35,13 +35,13 @@ AndEngine is open source and can be found [on a GitHub repository](https://githu
 1. Open [Android Studio](https://developer.android.com/studio).
    * It should already be installed on the lab computers.
    * If you're performing this experiment on your personal computer, you will need to install Android Studio by following the link above. Android Studio is compatible with Windows, macOS, and Linux. The installation may take up to an hour.
-2. Download the [BreakoutGate App](https://webwriters.com/ece2500/zybook/BreakoutGate-v5.zip) ZIP file from the link. Extract it into a folder.
+2. Download the [BreakoutGate](https://webwriters.com/ece2500/zybook/BreakoutGate-v5.zip) ZIP file from the link. Extract it into a folder.
 3. In Android Studio, open the folder as a project.
 4. Wait until the project finishes importing.
 5. Click the green play button at the top right to run the app.
    - If the play button is grayed out, ensure that a valid Android emulator exists.
    - To do so, open the Device Manager tab on the right, and check that a Virtual Device exists.
-   - If using the lab PCs, ensure the Virtual Device has this configuration: Pixel 5, API 30 "R" (Android 11), **Software** graphics acceleration.
+   - If using the lab computers, ensure the Virtual Device has this configuration: Pixel 5, API 30 "R" (Android 11), **Software** graphics acceleration.
    - Feel free to ask your instructor for help!
 6. If it works, you should see NAND gate bricks forming inverter circuits as shown to the left of the lab image above.
 
@@ -63,17 +63,15 @@ The Java code can be found in `src/main/java/com/example/ecelab/myapplication/Br
 
 ---
 
-Some steps require you to comment/uncomment sections of code.
+Some steps require you to comment/uncomment sections of code. To do so, select a section, then press Ctrl+/.
 
-To do so, select a section, then press Ctrl+/.
-
-Each section will be tagged with the corresponding question. For example, Q4 will require you to
+Each section of code will be tagged with the corresponding question. For example, Q4 will require you to
 search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as instructed.
 
 ---
 
 1. (Q1) Alter the velocity of the ball.
-   - Change the value of `DEMO_VELOCITY` at the beginning of the code.
+   - Change the value of `DEMO_VELOCITY` near the beginning of the code.
 2. (Q2) Put your name on the screen. 
    - Search for `nameBox` (using Ctrl+F), and change “Cody Herring” (the student who originally created this app) to your name.
    - Center it on the screen by adjusting the first argument of `new Text()`, which is initially `300`.
