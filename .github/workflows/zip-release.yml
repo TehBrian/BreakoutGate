@@ -1,0 +1,27 @@
+name: Build ZIP on tag push
+
+on:
+  push:
+    tags:
+      - 'v*'   # triggers on tags like v1, v2, v5, etc.
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Get tag name
+        id: tag
+        run: echo "TAG=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Archive tracked files only
+        run: |
+          git archive -o BreakoutGate-${{ steps.tag.outputs.TAG }}.zip HEAD
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: BreakoutGate-${{ steps.tag.outputs.TAG }}.zip
