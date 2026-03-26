@@ -62,6 +62,10 @@ and no longer maintained, but it can still be used for Android game development.
 6. If it works, you should see NAND gate bricks forming inverter circuits as shown to the left of
    the lab image above.
 
+**Tip:** The Android emulator can be rotated. It can also be put into its own pop-up window to make
+it larger. (To do so, click the 3 dots at the top right of the Running Devices tab. Then, click
+View Mode → Float.)
+
 ### (2) (Optional) Download the app onto your Android device
 
 If you have an Android device, try downloading the app onto it.
@@ -135,11 +139,11 @@ search for `Lab Q4` (using Ctrl+F) then either comment or uncomment the code as 
     - Comment/uncomment the code sections tagged with `Lab Q7`.
 8. (Q8) Make the NAND gate bricks shift down over time.
     - Comment/uncomment the code sections tagged with `Lab Q8`. This will:
-      - Move rows of hungry NANDs downward, toward the shooter, like an alien arcade game.
-      - Feed more rows down from the top.
+        - Move rows of hungry NANDs downward, toward the shooter, like an alien arcade game.
+        - Feed more rows down from the top.
 9. (Q9) Change the paddle to a curved paddle.
     - Comment/uncomment the code sections tagged with `Lab Q9`. This will:
-      - Make the ball deflect at non-45° if struck at paddle edges.
+        - Make the ball deflect at non-45° if struck at paddle edges.
     - Change `pong.png` to `pongCurved.png`.
 10. Anything else you'd like! Here are further ideas:
     - Add a defeat screen if the score becomes too negative.
