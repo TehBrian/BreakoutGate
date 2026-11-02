@@ -49,8 +49,8 @@ and no longer maintained, but it can still be used for Android game development.
     * If you're performing this experiment on your personal computer, you will need to install
       Android Studio by following the link above. Android Studio is compatible with Windows, macOS,
       and Linux. The installation may take up to an hour.
-2. Download the [BreakoutGate](https://webwriters.com/ece2500/zybook/BreakoutGate-v5.zip) ZIP file
-   from the link. Extract it into a folder.
+2. Download the [BreakoutGate](https://github.com/TehBrian/BreakoutGate/releases/download/v7/BreakoutGate-v7.zip)
+   ZIP file from the link. Extract it into a folder.
 3. In Android Studio, open the folder as a project.
 4. Wait until the project finishes importing.
 5. Click the green play button at the top right to run the app.
